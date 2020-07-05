@@ -5,8 +5,19 @@
 int WinMain(int argc, char **argv)
 {
     struct chip8 chip8;
-    chip8_memory_set(&chip8.memory, 0xffffffff, 'z');
+    chip8.registers.SP = 0;
+
+
+    // Test memory implementation
+    chip8_memory_set(&chip8.memory, 0x400, 'z');
     printf("%c\n", chip8_memory_get(&chip8.memory, 0x400));
+
+    // Test stack implementation
+    chip8_stack_push(&chip8, 0xaa);
+    chip8_stack_push(&chip8, 0xee);
+
+    printf("%x\n", chip8_stack_pop(&chip8));
+    printf("%x\n", chip8_stack_pop(&chip8));
 
 
     SDL_Init(SDL_INIT_EVERYTHING);
