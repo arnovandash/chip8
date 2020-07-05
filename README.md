@@ -1,5 +1,5 @@
 # chip8
-A CHIP-8 emulator written in C
+A CHIP-8 interpreter written in C
 
 
 
