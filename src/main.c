@@ -12,6 +12,9 @@ const char keyboard_map[CHIP8_TOTAL_KEYS] = {
 int WinMain(int argc, char **argv)
 {
     struct chip8 chip8;
+    chip8_init(&chip8);
+
+
     chip8.registers.SP = 0;
 
     // Test memory implementation
