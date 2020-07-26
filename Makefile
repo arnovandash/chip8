@@ -1,5 +1,6 @@
 INCLUDES= -I ./include
-FLAGS= -g
+FLAGS=	-g\
+		-nostartfiles # Windows specific flag
 
 OBJECTS=./build/chip8memory.o\
 		./build/chip8stack.o\
